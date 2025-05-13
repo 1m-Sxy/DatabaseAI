@@ -1,326 +1,2864 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40">
 
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<meta name="Excel Workbook Frameset">
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 15">
-<link rel=File-List
-href="Produit%20magasin%20site%20IA%20(2)_files/filelist.xml">
-<![if !supportTabStrip]>
-<link id="shLink" href="Produit%20magasin%20site%20IA%20(2)_files/sheet001.htm">
-
-<link id="shLink">
-
-<script language="JavaScript">
-<!--
- var c_lTabs=1;
-
- var c_rgszSh=new Array(c_lTabs);
- c_rgszSh[0] = "Feuille 1";
-
-
-
- var c_rgszClr=new Array(8);
- c_rgszClr[0]="window";
- c_rgszClr[1]="buttonface";
- c_rgszClr[2]="windowframe";
- c_rgszClr[3]="windowtext";
- c_rgszClr[4]="threedlightshadow";
- c_rgszClr[5]="threedhighlight";
- c_rgszClr[6]="threeddarkshadow";
- c_rgszClr[7]="threedshadow";
-
- var g_iShCur;
- var g_rglTabX=new Array(c_lTabs);
-
-function fnGetIEVer()
-{
- var ua=window.navigator.userAgent
- var msie=ua.indexOf("MSIE")
- if (msie>0 && window.navigator.platform=="Win32")
-  return parseInt(ua.substring(msie+5,ua.indexOf(".", msie)));
- else
-  return 0;
-}
-
-function fnBuildFrameset()
-{
- var szHTML="<frameset rows=\"*,18\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\""+document.all.item("shLink")[0].href+"\" name=\"frSheet\" noresize>"+
-  "<frameset cols=\"54,*\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\"\" name=\"frScroll\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "<frame src=\"\" name=\"frTabs\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "</frameset></frameset><plaintext>";
-
- with (document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- fnBuildTabStrip();
-}
-
-function fnBuildTabStrip()
-{
- var szHTML=
-  "<html><head><style>.clScroll {font:8pt Courier New;color:"+c_rgszClr[6]+";cursor:default;line-height:10pt;}"+
-  ".clScroll2 {font:10pt Arial;color:"+c_rgszClr[6]+";cursor:default;line-height:11pt;}</style></head>"+
-  "<body onclick=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" onselectstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+" topmargin=0 leftmargin=0><table cellpadding=0 cellspacing=0 width=100%>"+
-  "<tr><td colspan=6 height=1 bgcolor="+c_rgszClr[2]+"></td></tr>"+
-  "<tr><td style=\"font:1pt\">&nbsp;<td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(0);\" onmouseout=\"parent.fnMouseOutScroll(0);\"><a>&#171;</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(0);\" ondblclick=\"parent.fnScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(1);\" onmouseout=\"parent.fnMouseOutScroll(1);\"><a>&lt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(1);\" ondblclick=\"parent.fnScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(2);\" onmouseout=\"parent.fnMouseOutScroll(2);\"><a>&gt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(3);\" onmouseout=\"parent.fnMouseOutScroll(3);\"><a>&#187;</a></td>"+
-  "<td style=\"font:1pt\">&nbsp;<td></tr></table></body></html>";
-
- with (frames['frScroll'].document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- szHTML =
-  "<html><head>"+
-  "<style>A:link,A:visited,A:active {text-decoration:none;"+"color:"+c_rgszClr[3]+";}"+
-  ".clTab {cursor:hand;background:"+c_rgszClr[1]+";font:9pt Arial;padding-left:3px;padding-right:3px;text-align:center;}"+
-  ".clBorder {background:"+c_rgszClr[2]+";font:1pt;}"+
-  "</style></head><body onload=\"parent.fnInit();\" onselectstart=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+
-  " topmargin=0 leftmargin=0><table id=tbTabs cellpadding=0 cellspacing=0>";
-
- var iCellCount=(c_lTabs+1)*2;
-
- var i;
- for (i=0;i<iCellCount;i+=2)
-  szHTML+="<col width=1><col>";
-
- var iRow;
- for (iRow=0;iRow<6;iRow++) {
-
-  szHTML+="<tr>";
-
-  if (iRow==5)
-   szHTML+="<td colspan="+iCellCount+"></td>";
-  else {
-   if (iRow==0) {
-    for(i=0;i<iCellCount;i++)
-     szHTML+="<td height=1 class=\"clBorder\"></td>";
-   } else if (iRow==1) {
-    for(i=0;i<c_lTabs;i++) {
-     szHTML+="<td height=1 nowrap class=\"clBorder\">&nbsp;</td>";
-     szHTML+=
-      "<td id=tdTab height=1 nowrap class=\"clTab\" onmouseover=\"parent.fnMouseOverTab("+i+");\" onmouseout=\"parent.fnMouseOutTab("+i+");\">"+
-      "<a href=\""+document.all.item("shLink")[i].href+"\" target=\"frSheet\" id=aTab>&nbsp;"+c_rgszSh[i]+"&nbsp;</a></td>";
-    }
-    szHTML+="<td id=tdTab height=1 nowrap class=\"clBorder\"><a id=aTab>&nbsp;</a></td><td width=100%></td>";
-   } else if (iRow==2) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1></td><td height=1 class=\"clBorder\"></td>";
-    szHTML+="<td height=1></td><td height=1></td>";
-   } else if (iRow==3) {
-    for (i=0;i<iCellCount;i++)
-     szHTML+="<td height=1></td>";
-   } else if (iRow==4) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1 width=1></td><td height=1></td>";
-    szHTML+="<td height=1 width=1></td><td></td>";
-   }
-  }
-  szHTML+="</tr>";
- }
-
- szHTML+="</table></body></html>";
- with (frames['frTabs'].document) {
-  open("text/html","replace");
-  charset=document.charset;
-  write(szHTML);
-  close();
- }
-}
-
-function fnInit()
-{
- g_rglTabX[0]=0;
- var i;
- for (i=1;i<=c_lTabs;i++)
-  with (frames['frTabs'].document.all.tbTabs.rows[1].cells[fnTabToCol(i-1)])
-   g_rglTabX[i]=offsetLeft+offsetWidth-6;
-}
-
-function fnTabToCol(iTab)
-{
- return 2*iTab+1;
-}
-
-function fnNextTab(fDir)
-{
- var iNextTab=-1;
- var i;
-
- with (frames['frTabs'].document.body) {
-  if (fDir==0) {
-   if (scrollLeft>0) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i-1;
-   }
-  } else {
-   if (g_rglTabX[c_lTabs]+6>offsetWidth+scrollLeft) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<=scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i;
-   }
-  }
- }
- return iNextTab;
-}
-
-function fnScrollTabs(fDir)
-{
- var iNextTab=fnNextTab(fDir);
-
- if (iNextTab>=0) {
-  frames['frTabs'].scroll(g_rglTabX[iNextTab],0);
-  return true;
- } else
-  return false;
-}
-
-function fnFastScrollTabs(fDir)
-{
- if (c_lTabs>16)
-  frames['frTabs'].scroll(g_rglTabX[fDir?c_lTabs-1:0],0);
- else
-  if (fnScrollTabs(fDir)>0) window.setTimeout("fnFastScrollTabs("+fDir+");",5);
-}
-
-function fnSetTabProps(iTab,fActive)
-{
- var iCol=fnTabToCol(iTab);
- var i;
-
- if (iTab>=0) {
-  with (frames['frTabs'].document.all) {
-   with (tbTabs) {
-    for (i=0;i<=4;i++) {
-     with (rows[i]) {
-      if (i==0)
-       cells[iCol].style.background=c_rgszClr[fActive?0:2];
-      else if (i>0 && i<4) {
-       if (fActive) {
-        cells[iCol-1].style.background=c_rgszClr[2];
-        cells[iCol].style.background=c_rgszClr[0];
-        cells[iCol+1].style.background=c_rgszClr[2];
-       } else {
-        if (i==1) {
-         cells[iCol-1].style.background=c_rgszClr[2];
-         cells[iCol].style.background=c_rgszClr[1];
-         cells[iCol+1].style.background=c_rgszClr[2];
-        } else {
-         cells[iCol-1].style.background=c_rgszClr[4];
-         cells[iCol].style.background=c_rgszClr[(i==2)?2:4];
-         cells[iCol+1].style.background=c_rgszClr[4];
+    <meta charset="UTF-8">
+    <title>Catalogue Produits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
         }
-       }
-      } else
-       cells[iCol].style.background=c_rgszClr[fActive?2:4];
-     }
-    }
-   }
-   with (aTab[iTab].style) {
-    cursor=(fActive?"default":"hand");
-    color=c_rgszClr[3];
-   }
-  }
- }
-}
-
-function fnMouseOverScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[7];
-}
-
-function fnMouseOutScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[6];
-}
-
-function fnMouseOverTab(iTab)
-{
- if (iTab!=g_iShCur) {
-  var iCol=fnTabToCol(iTab);
-  with (frames['frTabs'].document.all) {
-   tdTab[iTab].style.background=c_rgszClr[5];
-  }
- }
-}
-
-function fnMouseOutTab(iTab)
-{
- if (iTab>=0) {
-  var elFrom=frames['frTabs'].event.srcElement;
-  var elTo=frames['frTabs'].event.toElement;
-
-  if ((!elTo) ||
-   (elFrom.tagName==elTo.tagName) ||
-   (elTo.tagName=="A" && elTo.parentElement!=elFrom) ||
-   (elFrom.tagName=="A" && elFrom.parentElement!=elTo)) {
-
-   if (iTab!=g_iShCur) {
-    with (frames['frTabs'].document.all) {
-     tdTab[iTab].style.background=c_rgszClr[1];
-    }
-   }
-  }
- }
-}
-
-function fnSetActiveSheet(iSh)
-{
- if (iSh!=g_iShCur) {
-  fnSetTabProps(g_iShCur,false);
-  fnSetTabProps(iSh,true);
-  g_iShCur=iSh;
- }
-}
-
- window.g_iIEVer=fnGetIEVer();
- if (window.g_iIEVer>=4)
-  fnBuildFrameset();
-//-->
-</script>
-<![endif]><!--[if gte mso 9]><xml>
- <x:ExcelWorkbook>
-  <x:ExcelWorksheets>
-   <x:ExcelWorksheet>
-    <x:Name>Feuille 1</x:Name>
-    <x:WorksheetSource
-     HRef="Produit%20magasin%20site%20IA%20(2)_files/sheet001.htm"/>
-   </x:ExcelWorksheet>
-  </x:ExcelWorksheets>
-  <x:Stylesheet HRef="Produit%20magasin%20site%20IA%20(2)_files/stylesheet.css"/>
-  <x:WindowHeight>10116</x:WindowHeight>
-  <x:WindowWidth>23040</x:WindowWidth>
-  <x:WindowTopX>32767</x:WindowTopX>
-  <x:WindowTopY>32767</x:WindowTopY>
-  <x:ProtectStructure>False</x:ProtectStructure>
-  <x:ProtectWindows>False</x:ProtectWindows>
- </x:ExcelWorkbook>
-</xml><![endif]-->
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
+<body>
+    <h1>Catalogue des Produits</h1>
+    <table>
+        <tr>
+            <th>Produit</th>
+            <th>Type de produit</th>
+            <th>Type de son</th>
+            <th>Taille pièce</th>
+            <th>Prix (€)</th>
+        </tr>
 
-<frameset rows="*,39" border=0 width=0 frameborder=no framespacing=0>
- <frame src="Produit%20magasin%20site%20IA%20(2)_files/sheet001.htm" name="frSheet">
- <frame src="Produit%20magasin%20site%20IA%20(2)_files/tabstrip.htm" name="frTabs" marginwidth=0 marginheight=0>
- <noframes>
-  <body>
-   <p>This page uses frames, but your browser doesn't support them.</p>
-  </body>
- </noframes>
-</frameset>
+        <tr>
+            <td>Absolue Cable - FONTAINBLEAU</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1660.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - RCA Infinity (numérique)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2505.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - RJ45 DATA TIM</td>
+            <td>Câble RJ45</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>630.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - Secteur Amboise</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>390.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - Secteur Chambord</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>710.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - Secteur Chenonceau</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1020.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - Secteur Versailles</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2910.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - Secteur Vincenne</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4800.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Essentiel HP</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>740.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Essentiel RCA (Modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>580.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Essentiel RCA (Numérique)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>290.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Essentiel XLR (Digital)</td>
+            <td>XLR Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>350.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Essentiel XLR (modulation)</td>
+            <td>XLR Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>695.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Extrem HP</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4335.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Extrem RCA (digital)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1480.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Extrem RCA (modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2725.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Extrem XLR (digital)</td>
+            <td>XLR Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1775.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Extrem XLR (modulation)</td>
+            <td>XLR Modulation</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3720.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM POWER 1</td>
+            <td>Barette secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>650.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM POWER2</td>
+            <td>Barette secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1400.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Revolution RCA (Digital)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>795.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Revolution RCA (modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1480.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Revolution XLR (digital)</td>
+            <td>XLR Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>995.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Revolution XLR (modulation)</td>
+            <td>XLR Modulation</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1775.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - TIM Signature HP (2x4M)</td>
+            <td>Câbles d'enceinte</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>12355.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - VERSAILLES</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2910.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - VINCENNES</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4800.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cable - XLR Infinity (numérique)</td>
+            <td>XLR Digital</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Cables - TIM Signature HP (2x4M)</td>
+            <td>Câbles d'enceinte</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>10730.0</td>
+        </tr>
+    
+        <tr>
+            <td>Absolue Creation - TIM Revolution HP</td>
+            <td>Câbles d'enceinte</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1735.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Adamante</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>17500.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Armonia</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>6000.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Edena</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>8900.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Enigma MKII</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Grande</td>
+            <td>26500.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Forte</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>7500.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Sensa</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3150.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Stela</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4350.0</td>
+        </tr>
+    
+        <tr>
+            <td>AperturA - Swing</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>2200.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - AM 100 signature</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>949.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - AM 200 EVO</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1400.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - AM 300</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2300.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - CD 100 EVO</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1250.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - CD 200 EVO</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1750.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - CD 400 EVO</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5600.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - CD 50 EVO</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>849.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - CD 80 EVO</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1000.0</td>
+        </tr>
+    
+        <tr>
+            <td>ATOLL - DR 100</td>
+            <td>Drive CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - DR 200</td>
+            <td>Drive CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1449.0</td>
+        </tr>
+    
+        <tr>
+            <td>ATOLL - DR 400 EVO</td>
+            <td>Drive CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - IN 100</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>1249.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - IN 200 EVO</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1800.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - IN 300 EVO</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2700.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - IN 400 EVO</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5400.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - IN 50</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite</td>
+            <td>849.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - IN 80</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>1000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - MA 100</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite</td>
+            <td>500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - MD 100 EVO</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>650.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - MS 120</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1300.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - PR 200</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>949.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - PR 300</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1499.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - PR 300 EVO</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - PR 400 EVO</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - SDA 200</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3100.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - SDA 300</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - ST 200</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2100.0</td>
+        </tr>
+    
+        <tr>
+            <td>Atoll - ST 300</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Brosse Gold</td>
+            <td>Accessoire Vinyle</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>29.95</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Brosse Silver</td>
+            <td>Accessoire Vinyle</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>19.95</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Carbon (optique)</td>
+            <td>Câble Optique</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>189.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Cinnamon</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>139.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Diamond</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2199.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Dragon Zero</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>28700.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Fil de terre "BLACK"</td>
+            <td>Fil de terre</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>59.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Firebird BASS</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>11500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Firebird Combo</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>27000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Forest</td>
+            <td>Câble Optique</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>99.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Dragon BASS</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>22100.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Dragon BiWire</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>50800.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Firebird Zero</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>15500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Robin Hood BASS</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1899.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Robin Hood BiWire</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Robin Hood Silver</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>6399.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Robin Hood Silver BiWire</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>8299.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Robin Hood Zero</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1899.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Rocket 11</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>379.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Rocket 22</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>499.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Rocket 33</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>629.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Rocket 44</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Rocket 88 (DBS)</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1219.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Thunderbird BASS</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4300.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Thunderbird BiWire</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>9600.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Thunderbird Zero</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5300.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Type 5</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>569.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP Type 9</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>789.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP William Tell BASS</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2699.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP William Tell Silver BiWire</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>10899.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - HP William Tell Zero</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3099.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Niagara 5000 (conditionneur)</td>
+            <td>Conditionneur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5995.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - NRG Monsoon (secteur)</td>
+            <td>Conditionneur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>619.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - NRG-X2 (secteur)</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>89.9</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - NRG-Y2 (secteur)</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>159.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - NRG-Y3 (secteur)</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>199.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Pearl</td>
+            <td>Câble RJ45</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>59.95</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Pearl (optic)</td>
+            <td>Câble Optique</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>39.9</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - PowerQuest 2 (conditionneur)</td>
+            <td>Conditionneur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>249.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - PowerQuest 505 (conditionneur)</td>
+            <td>Conditionneur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Carbon (Digital)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>269.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Cinnamon (digital)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>109.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Diamond (digital)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1399.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Evergreen (modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>89.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Forest (digital)</td>
+            <td>RCA Digital</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>54.9</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Pegasus (modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1699.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Redriver (modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>229.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - RCA Yukon (modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>539.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Straps Dragon</td>
+            <td>Straps</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>749.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Straps ThunderBird</td>
+            <td>Straps</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>349.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Tornado (secteur)</td>
+            <td>Câble secteur</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1899.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Vodka</td>
+            <td>Câble RJ45</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>699.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - Vodka (optique)</td>
+            <td>Câble Optique</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>349.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - XLR Black Beauty (modulation)</td>
+            <td>XLR Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1089.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - XLR Carbon (digital)</td>
+            <td>XLR Digital</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>319.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - XLR Diamond (digital)</td>
+            <td>XLR Digital</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - XLR Pegasus (modulation)</td>
+            <td>XLR Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2099.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - XLR Redriver (modulation)</td>
+            <td>XLR Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>299.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest - XLR Yukon (modulation)</td>
+            <td>XLR Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>639.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest : HP Q2</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>329.0</td>
+        </tr>
+    
+        <tr>
+            <td>Audioquest : RCA Black Beauty (modulation)</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>869.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - NODE</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>599.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - NODE ICON</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1099.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - NODE NANO</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>349.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - Power NODE 2</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - Pulse</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - Pulse Flex</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite</td>
+            <td>299.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - Pulse M</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite</td>
+            <td>450.0</td>
+        </tr>
+    
+        <tr>
+            <td>Bluesound - Pulse Mini</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>649.0</td>
+        </tr>
+    
+        <tr>
+            <td>Boenicke - W11</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>moyenne, grande</td>
+            <td>11799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Boenicke - W5</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>5200.0</td>
+        </tr>
+    
+        <tr>
+            <td>Boenicke - W8</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>7700.0</td>
+        </tr>
+    
+        <tr>
+            <td>Borresen - X1</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Borresen - X6</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>20000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Børresen X2</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>8000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Cabasse - 240 S</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1690.0</td>
+        </tr>
+    
+        <tr>
+            <td>Cabasse - The Pearl</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>3290.0</td>
+        </tr>
+    
+        <tr>
+            <td>Cabasse - The Pearl Akoya</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1590.0</td>
+        </tr>
+    
+        <tr>
+            <td>Cabasse - The Pearl Keshi</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>2490.0</td>
+        </tr>
+    
+        <tr>
+            <td>Copie de Audioquest - Fil de terre "Thunder"</td>
+            <td>Fil de terre</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>119.0</td>
+        </tr>
+    
+        <tr>
+            <td>Copland - CSA 100</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>4390.0</td>
+        </tr>
+    
+        <tr>
+            <td>Copland - CSA 150</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5390.0</td>
+        </tr>
+    
+        <tr>
+            <td>Copland - CSA 70</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>2490.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - ARCH</td>
+            <td>Préamplificateur Phono</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>490.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - ASTRA</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>16000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - ASTRA DUAL</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>32000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - Gemini II</td>
+            <td>Écouteurs sans fil</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>399.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - Mania</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite</td>
+            <td>890.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - Phantom 1 - 103db</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>moyenne, grande</td>
+            <td>2100.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - Phantom 1 - 108 dB</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>moyenne, grande</td>
+            <td>3100.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - Phantom II - 95dB</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>1100.0</td>
+        </tr>
+    
+        <tr>
+            <td>Devialet - Phantom II - 98 dB</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1390.0</td>
+        </tr>
+    
+        <tr>
+            <td>Dual - CS 329</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>399.0</td>
+        </tr>
+    
+        <tr>
+            <td>Dual - CS 418</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>549.0</td>
+        </tr>
+    
+        <tr>
+            <td>Dual - CS 429</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>699.0</td>
+        </tr>
+    
+        <tr>
+            <td>Dual - CS 518</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>699.0</td>
+        </tr>
+    
+        <tr>
+            <td>Dual - CS 529 BT</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Dual - CS 618Q</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1199.0</td>
+        </tr>
+    
+        <tr>
+            <td>EgglestonWork - Oso</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>16300.0</td>
+        </tr>
+    
+        <tr>
+            <td>EgglestonWorks - Andra III se</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>36990.0</td>
+        </tr>
+    
+        <tr>
+            <td>EgglestonWorks - Camilla Signature</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>24000.0</td>
+        </tr>
+    
+        <tr>
+            <td>EgglestonWorks - Emma Evo</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>8900.0</td>
+        </tr>
+    
+        <tr>
+            <td>EgglestonWorks - Ivy Signature SE</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>250000.0</td>
+        </tr>
+    
+        <tr>
+            <td>EgglestonWorks - Kiva II</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>27000.0</td>
+        </tr>
+    
+        <tr>
+            <td>EgglestonWorks - Nico Evo</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>moyenne, grande</td>
+            <td>6990.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - F01</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>24000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - F02</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>22000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - Grandioso C1X</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>40000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - Grandioso C1X (solo)</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>24000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - Grandioso M1X</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>75000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - Grandioso T1</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>80000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - K-01 XD</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>29000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - K03XD</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>20000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - K05XD</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>14000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - N-01 XD SE</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>27500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - N03T</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>13900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - N05XD</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>13900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - S02</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>24000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - S05</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>22000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric - S1X Grandioso</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>40000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Esoteric- PS-01F</td>
+            <td>Alimentation</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>5900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - AZURYS</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>549.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - Bathys</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - Celeste</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - Clear</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - Clear MG</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1500.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Diablo Utopia</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>18000.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Grande Utopia</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Grande</td>
+            <td>250000.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - HADENYS</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>699.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Maestro Utopia</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Grande</td>
+            <td>70000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - Radiance</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1299.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Scala Utopia EVO</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Grande</td>
+            <td>40000.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Sopra N°1</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>10500.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Sopra N°2</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>17000.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Sopra N°3</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>21000.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Stella Utopia Em</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>135000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - Stellia</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3000.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Support de Casque</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>299.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Theva N°1</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>718.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Theva N°2</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1498.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCAL - Theva N°3</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1698.0</td>
+        </tr>
+    
+        <tr>
+            <td>Focal - Utopia</td>
+            <td>Casque</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Gryphon Audio - EOS 5</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>moyenne, grande</td>
+            <td>59750.0</td>
+        </tr>
+    
+        <tr>
+            <td>Harbeth P3esr XD</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>2900.0</td>
+        </tr>
+    
+        <tr>
+            <td>JERN - 11</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>1790.0</td>
+        </tr>
+    
+        <tr>
+            <td>JERN - 11S</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>2690.0</td>
+        </tr>
+    
+        <tr>
+            <td>JERN - 15</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3990.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - Abscisse Jublié</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>6650.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - BlissJubilé</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2130.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - Cantabile Jublié</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4600.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - Euterpe Jublié</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2900.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - FoliaJubile</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1230.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - Luana</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>1900.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - Lucia</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>745.0</td>
+        </tr>
+    
+        <tr>
+            <td>JMR - Orfeo Grande</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>14800.0</td>
+        </tr>
+    
+        <tr>
+            <td>JRM - Orfeo Jubilé</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>11500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Lumïn - D3</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Lumïn - T3</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Lumïn - U2</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Lumïn - U2 Mini</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Martin Logan - B10</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>1659.0</td>
+        </tr>
+    
+        <tr>
+            <td>Martin Logan - ESL 11</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>moyenne, grande</td>
+            <td>16000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Martin Logan - ESL 9</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>moyenne, grande</td>
+            <td>9990.0</td>
+        </tr>
+    
+        <tr>
+            <td>Meitner - MA3i</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>11950.0</td>
+        </tr>
+    
+        <tr>
+            <td>Meitner - Pre Stereo</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>8950.0</td>
+        </tr>
+    
+        <tr>
+            <td>MERASON - FREROT</td>
+            <td>DAC</td>
+            <td>Équilibré</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1355.0</td>
+        </tr>
+    
+        <tr>
+            <td>Metronome - DSC</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>25990.0</td>
+        </tr>
+    
+        <tr>
+            <td>Metronome - DSS 2</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4590.0</td>
+        </tr>
+    
+        <tr>
+            <td>Metronome - Le Player 4</td>
+            <td>Drive CD</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>8100.0</td>
+        </tr>
+    
+        <tr>
+            <td>Metronome - Le Streamer</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4990.0</td>
+        </tr>
+    
+        <tr>
+            <td>Moonriver - 404</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3499.0</td>
+        </tr>
+    
+        <tr>
+            <td>Moonriver - 404 reference</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - DJ-03HD</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>189.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - JT 80 BK</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>589.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - JT 80 LB</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>229.0</td>
+        </tr>
+    
+        <tr>
+            <td>NAGAOKA - MP 110</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>159.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - MP 150</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>379.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - MP 200</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>479.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - MP 300</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>759.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - MP 500</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>900.0</td>
+        </tr>
+    
+        <tr>
+            <td>Nagaoka - MP100</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>129.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - 555 PS DR</td>
+            <td>Alimentation</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>8999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - Atom (Casque)</td>
+            <td>Amplificateur casque</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2599.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - ATOM (HDMI)</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>2599.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - CD5 si</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1990.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - Muso V2</td>
+            <td>Enceinte connectée</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NAC 332</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>9500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NAC 552 + PS</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>31000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NAIT 5 si</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>1799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NAIT XS 3</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NAP 250</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>7500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NAP 350</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>15000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NAP 500 + PS</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>moyenne, grande</td>
+            <td>31000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - ND 555 + PS</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>31000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - ND5 XS</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NDX 2</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>6999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - Nova Power Edition</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>9999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NPX 300</td>
+            <td>Alimentation</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>7500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NSC 222</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>7500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - NSS 333</td>
+            <td>Lecteur Réseau</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>9500.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - Supernait 3</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4790.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - Uniti Core</td>
+            <td>Serveur musical</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2499.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - Uniti NOVA</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Naim - Uniti Star</td>
+            <td>Amplificateur Tout-En-Un</td>
+            <td>Équilibré, Chaleureux, dynamique</td>
+            <td>Petite, moyenne</td>
+            <td>3999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Ngaoka - JT 80 LB</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>229.0</td>
+        </tr>
+    
+        <tr>
+            <td>Raga - Couple 3 RCA</td>
+            <td>RCA Modulation</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>149.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Aethos</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4290.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Ania Pro</td>
+            <td>Cellule MC</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1090.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Apheta</td>
+            <td>Cellule MC</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1750.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Aria MK3 MC/MM</td>
+            <td>Préamplificateur Phono</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1490.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Aya</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>1999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Carbon</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Courroie</td>
+            <td>Autre</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Elex MK4</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne</td>
+            <td>1649.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Elicit MK5</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2750.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Fono MC MK4</td>
+            <td>Préamplificateur Phono</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>349.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Fono MM MK5</td>
+            <td>Préamplificateur Phono</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>300.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - FonoMini A2D</td>
+            <td>Préamplificateur Phono</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>159.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - io</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite</td>
+            <td>589.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Kyte</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite</td>
+            <td>589.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - ND 3</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>229.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - ND 5</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>589.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - ND 7</td>
+            <td>Cellule MM</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>589.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - P6</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1590.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Planar 1</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>399.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Planar 2</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>749.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Planar 3</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>879.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Planar 8</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2499.0</td>
+        </tr>
+    
+        <tr>
+            <td>Rega - Saturn MK3</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2750.0</td>
+        </tr>
+    
+        <tr>
+            <td>Silent Angel - BONN N8</td>
+            <td>Switch</td>
+            <td>Équilibré</td>
+            <td>Petite, moyenne, grande</td>
+            <td>449.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAD - Compact Evo One</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>35000.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAD - Compact reference</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>84000.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAD - E1XT</td>
+            <td>Autre</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>28000.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAD - Evolution One</td>
+            <td>Autre</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>17000.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAD - GE1</td>
+            <td>Autre</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>58000.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAD - Micro Evo One</td>
+            <td>Autre</td>
+            <td>Équilibré, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>15000.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAD - Reference One</td>
+            <td>Autre</td>
+            <td>Équilibré, Clair</td>
+            <td>moyenne, grande</td>
+            <td>159000.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Antileon EVO (mono)</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>moyenne, grande</td>
+            <td>79000.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Antileon EVO (stereo)</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>moyenne, grande</td>
+            <td>39500.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - APEX (mono)</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Grande</td>
+            <td>215000.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - APEX (stereo)</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Grande</td>
+            <td>107500.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - APOLLO</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>154500.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Commander</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>70500.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Diablo 120</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>14250.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Diablo 333</td>
+            <td>Amplificateur intégré</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>25950.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - EOS 2</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>27350.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Essence (Ampli mono)</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>moyenne, grande</td>
+            <td>47760.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Essence (Ampli stereo)</td>
+            <td>Amplificateur de puissance</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>23880.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Essence (pré)</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>17750.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - ETHOS</td>
+            <td>Lecteur CD</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>40650.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Kodo</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Grande</td>
+            <td>430000.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Mephisto</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Grande</td>
+            <td>59750.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Trident II</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>143700.0</td>
+        </tr>
+    
+        <tr>
+            <td>The Gryphon - Zena</td>
+            <td>Préamplificateur</td>
+            <td>Équilibré, Dynamique, Clair, Chaleureux</td>
+            <td>Petite, moyenne, grande</td>
+            <td>17750.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Arro</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2299.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Bison Monitor</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2599.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Bison Tower</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3399.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Bison Twin Tower</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>moyenne, grande</td>
+            <td>4499.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Element Fire V2</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>8199.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Element Metal V2</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>moyenne, grande</td>
+            <td>17799.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Forest</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>5999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Forest Signature</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>8199.0</td>
+        </tr>
+    
+        <tr>
+            <td>TOTEM - Kin Play</td>
+            <td>Enceintes bibliothèques actives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>1399.0</td>
+        </tr>
+    
+        <tr>
+            <td>TOTEM - Kin Play Mini</td>
+            <td>Enceintes bibliothèques actives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>1099.0</td>
+        </tr>
+    
+        <tr>
+            <td>TOTEM - Kin Play Tower</td>
+            <td>Enceintes colonnes actives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>2700.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Signature One</td>
+            <td>Enceintes bibliothèque passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne</td>
+            <td>3899.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Tress HP</td>
+            <td>Câble HP</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Tribe III</td>
+            <td>Enceintes mural</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>moyenne, grande</td>
+            <td>2499.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Wind</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>moyenne, grande</td>
+            <td>12999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem - Wind Design</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>moyenne, grande</td>
+            <td>16999.0</td>
+        </tr>
+    
+        <tr>
+            <td>Totem- Tribe Tower</td>
+            <td>Enceintes colonnes passives</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>6299.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Calon dual-mono phono préamplifier</td>
+            <td>Préamplificateur Phono</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>20000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Cellule Dark Sabre (New)</td>
+            <td>Cellule MC</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1650.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Cellule Magneto</td>
+            <td>Cellule MC</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>300.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Cellule Mystic</td>
+            <td>Cellule MC</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>3000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Cellule Sabre</td>
+            <td>Cellule MC</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1075.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Cellule XtraX</td>
+            <td>Cellule MC</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>6575.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - DGX</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4700.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - MG-1</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>12050.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Preamplifier PHONO-1 MkII L (MC | MM)</td>
+            <td>Préamplificateur Phono</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1649.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - Reference Tonearm Generation III</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>78000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - RG 1</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>28950.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - SG 1</td>
+            <td>Platine Vinyle</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>19000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - SuperGroove II Pathfinder</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>18000.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere - SuperGroove Precision</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>1990.0</td>
+        </tr>
+    
+        <tr>
+            <td>Vertere -SuperGroove HB</td>
+            <td>Autre</td>
+            <td>Équilibré, Dynamique, Clair</td>
+            <td>Petite, moyenne, grande</td>
+            <td>4990.0</td>
+        </tr>
+    
+    </table>
+</body>
 </html>
